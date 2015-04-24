@@ -4,34 +4,20 @@
     <h2>Please sign in</h2>
     <h2>Students here</h2>
     <ul>
-      <li ng-repeat="item in studentsHere = (students | filter:{inClass: true})">
-        {{item.name}} <a ng-click="studentSignOut(item)">Sign Out</a>
+      <li class="unbulleted" ng-repeat="item in studentsHere = (students | filter:{inClass: true})">
+        <a ui-sref="sign-in" ng-click="studentSignOut(item)">
+          <button class="btn btn-success">Sign Out</button></a>
+          {{item.name}}
       </li>
     </ul>
     <h2>Students not here</h2>
     <ul>
-      <li ng-repeat="item in studentsHere = (students | filter:{inClass: false})">
-        {{item.name}} <a ng-click="studentSignIn(item)">Sign In</a>
+      <li class="unbulleted" ng-repeat="item in studentsHere = (students | filter:{inClass: false})">
+        <a ui-sref="sign-in" ng-click="studentSignIn(item)">
+          <button class="btn btn-danger">Sign In</button></a>
+          {{item.name}}
       </li>
     </ul>
     </div>
   </div>
 </div>
-
-      <!-- <div class="col-md-6 bg-warning" ng-show="students.length">
-        <h2>Students not here</h2>
-        <ul>
-          <li ng-repeat="item in studentsNotHere = (students | fliter:{inClass: false})">
-            {{item.name}}
-          </li>
-        </ul>
-      </div>
-    </div>
-   -->
-
-
-<!-- <ul>
-  <li ng-repeat="item in studentsHere = (students | fliter:{inClass: true})">
-    {{item.name}} <a ng-click="inClass(item)">
-  </li>
-</ul> -->

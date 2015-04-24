@@ -2,24 +2,13 @@
   <h1>Welcome</h1>
   <h4>Thank you for joining us today</h4>
   <form id="form_id" action="sign-in.html">
-    <button ng-submit="" class="btn btn-primary">Sign In</button>
+    <a ui-sref="sign-in"><button ng-submit="submit" class="btn btn-primary">Sign In</button></a>
+    <a ui-sref="whos-here"><button ng-submit="submit" class="btn btn-success">Who's here</button></a>
 
-  </form>
-  <form id="form_id" action="whos-here.html">
-    <button ng-submit="" class="btn btn-success">Who's here</button>
-  </form>
 
 </div>
 <div class="container" ng-controller="StudentsCtrl">
-  <h2>Add a student to the class</h2>
-  <form ng-submit="addStudent()" role="form">
-    <div class="form-group">
-      <input type="text" ng-model="StudentFactory.studentName" class="form-control" placeholder="Enter student name">
-    </div>
-    <br>
-    <button type="submit" class="btn btn-warning">Add Student</button>
-  </form>
-  <h2>All Students</h2>
+  <h2>All Students in this class</h2>
   <ul>
     <li ng-repeat="item in students">
       {{item.name}}
