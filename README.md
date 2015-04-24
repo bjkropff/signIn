@@ -7,12 +7,13 @@ April 25 2015
 
 
 ##Description
-A hacker news clone app that where users can post links to articles, vote on which ones they like best, and discuss the articles with comments.
+This is a web app that will allow students to sign in and out of class for the day, and it allows a teacher to see who is signed in and who is signed out.
 
 ##Technologies Used
 <a href='https://angularjs.org/'>AngularJS</a> <br>
 <a href='http://angular-ui.github.io/'>AngularUI</a><br>
 Javascript
+Bootstrap
 
 
 ##Use and Editing

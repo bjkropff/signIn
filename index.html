@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" ng-app="studentLog">
   <head>
     <meta charset="UTF-8">
     <title></title>
@@ -11,25 +11,7 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" ui-sref="home"></a>
-          </div>
-          <div class="collapse navbar-collapse" id="mynav">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a ui-sref="topics"></a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div class="jumbotron hidden-xs ">
-      </div>
+
       <div ui-view>
       </div>
     </div>
