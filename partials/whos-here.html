@@ -1,13 +1,23 @@
-<h5><a ui-sref="sign-in">Sign IN</a> | <a ui-sref="whos-here">Who's here</a>  | <a href="home">Home</a></h5>
-<div class="container">
-  <h2>Students here</h2>
+<div class="row" ng-controller="StudentsCtrl">
+  <div class="col-md-6 bg-danger" ng-show="students.length">
+    <h2>Students here</h2>
+    <ul>
+      <li ng-repeat="item in studentsHere = (students | fliter:{inClass: true})">
+        {{item.name}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6 bg-success" ng-show="students.length">
+    <h2>Students not here</h2>
+    <ul>
+      <li ng-repeat="item in studentsNotHere = (students | fliter:{inClass: false})">
+        {{item.name}}
+      </li>
+    </ul>
+  </div>
   <ul>
-    <li></li>
-    <li></li>
-  </ul>
-  <h2>Students not here</h2>
-  <ul>
-    <li></li>
-    <li></li>
+    <li ng-repeat="item in students">
+      {{item.name}}
+    </li>
   </ul>
 </div>

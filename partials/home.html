@@ -1,8 +1,28 @@
-<h5><a ui-sref="sign-in">Sign IN</a> | <a ui-sref="whos-here">Who's here</a></h5>
 <div class="jumbotron">
   <h1>Welcome</h1>
   <h4>Thank you for joining us today</h4>
-  <button ng-submit="" class="btn btn-primary">Sign In</button>
-  <button ng-submit="" class="btn btn-success">Who's here</button>
+  <form id="form_id" action="sign-in.html">
+    <button ng-submit="" class="btn btn-primary">Sign In</button>
 
+  </form>
+  <form id="form_id" action="whos-here.html">
+    <button ng-submit="" class="btn btn-success">Who's here</button>
+  </form>
+
+</div>
+<div class="col-md-4">
+  <h2>Add a student to the class</h2>
+  <form ng-submit="addStudent()" role="form">
+    <div class="form-group">
+      <input type="text" ng-model="StudentFactory.studentName" class="form-control" placeholder="Enter student name">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-warning">Add Student</button>
+  </form>
+  <h2>All Students</h2>
+  <ul>
+    <li ng-repeat="item in students">
+      {{item.name}}
+    </li>
+  </ul>
 </div>

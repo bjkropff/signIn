@@ -1,7 +1,32 @@
-<h5><a ui-sref="sign-in">Sign IN</a> | <a ui-sref="whos-here">Who's here</a>  | <a href="home">Home</a></h5>
- | Home
+
 <div class="container">
   <h2>Please sign in</h2>
-  <button class="btn btn-default">Sign In</button>
-  <button class="btn btn-success">Sign out</button>
+  <button class="btn btn-warning">Sign In</button>
+  <button class="btn btn-warning ">Sign out</button>
 </div>
+
+
+<div class="row" ng-controller="StudentsCtrl">
+  <div class="col-md-6 bg-warning" ng-show="inClass.length">
+    <h2>Students here</h2>
+    <ul>
+      <li ng-repeat="item in studentsHere = (students | fliter:{inClass: true})">
+        {{item.name}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6 bg-warning" ng-show="inClass.length">
+    <h2>Students not here</h2>
+    <ul>
+      <li ng-repeat="item in studentsNotHere = (students | fliter:{inClass: false})">
+        {{item.name}}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- <ul>
+  <li ng-repeat="item in studentsHere = (students | fliter:{inClass: true})">
+    {{item.name}} <a ng-click="inClass(item)">
+  </li>
+</ul> -->
