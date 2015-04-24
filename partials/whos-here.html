@@ -2,7 +2,7 @@
   <div class="col-md-6 bg-danger" ng-show="students.length">
     <h2>Students here</h2>
     <ul>
-      <li ng-repeat="item in studentsHere = (students | fliter:{inClass: true})">
+      <li ng-repeat="item in studentsHere = (students | filter:{inClass: true})">
         {{item.name}}
       </li>
     </ul>
@@ -10,14 +10,9 @@
   <div class="col-md-6 bg-success" ng-show="students.length">
     <h2>Students not here</h2>
     <ul>
-      <li ng-repeat="item in studentsNotHere = (students | fliter:{inClass: false})">
+      <li ng-repeat="item in studentsNotHere = (students | filter:{inClass: false})">
         {{item.name}}
       </li>
     </ul>
   </div>
-  <ul>
-    <li ng-repeat="item in students">
-      {{item.name}}
-    </li>
-  </ul>
 </div>
