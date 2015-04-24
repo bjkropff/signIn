@@ -9,12 +9,12 @@ studentLog.config(function($stateProvider) {
   $stateProvider.state('sign-in', {
     url: "/sign-in",
     templateUrl: "partials/sign-in.html",
-    controller: "StudentCtrl"
+    controller: "StudentsCtrl"
   });
 
   $stateProvider.state('whos-here', {
     url: "/whos-here",
     templateUrl: "partials/whos-here.html",
-    controller: 'StudentCtrl'
+    controller: 'StudentsCtrl'
   });
 });
